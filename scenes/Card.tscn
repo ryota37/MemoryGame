@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg6big6a4e5kn"]
+
+[ext_resource type="Script" uid="uid://bgmjpaf3oh2ys" path="res://scripts/Card.cs" id="1_yiag5"]
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_yiag5")
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
