@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://7v5jll0ty481"]
+[gd_scene load_steps=3 format=3 uid="uid://7v5jll0ty481"]
 
 [ext_resource type="Script" uid="uid://cgqh6i3pwgy5s" path="res://scripts/Main.cs" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://bg6big6a4e5kn" path="res://scenes/Card.tscn" id="2_rvslj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -8,6 +9,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_elqb8")
+CardScene = ExtResource("2_rvslj")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

@@ -5,6 +5,7 @@
 [node name="Button" type="Button"]
 offset_right = 8.0
 offset_bottom = 8.0
+text = "Card"
 script = ExtResource("1_yiag5")
 
 [node name="Image" type="TextureRect" parent="."]
