@@ -13,7 +13,7 @@ public partial class Card : Button
 	{
 		FocusMode = FocusModeEnum.None;
 		Text = "";
-		CustomMinimumSize = new Vector2(120, 180);
+		CustomMinimumSize = new Vector2(64, 64);
 		
 		EnsureImageNode();
 		_image.MouseFilter = MouseFilterEnum.Ignore;
