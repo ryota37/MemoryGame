@@ -1,11 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://7v5jll0ty481"]
+[gd_scene load_steps=16 format=3 uid="uid://7v5jll0ty481"]
 
 [ext_resource type="Script" uid="uid://cgqh6i3pwgy5s" path="res://scripts/Main.cs" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://bg6big6a4e5kn" path="res://scenes/Card.tscn" id="2_rvslj"]
 [ext_resource type="Texture2D" uid="uid://bu21veuj2jcnx" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_back.png" id="3_0bbpv"]
 [ext_resource type="Texture2D" uid="uid://c2s0gq1ghefrj" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_clubs_02.png" id="4_c01mt"]
+[ext_resource type="Texture2D" uid="uid://bm07dmbvhppoq" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_spades_A.png" id="4_wp0k4"]
+[ext_resource type="Texture2D" uid="uid://dss7tboalb3jn" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_spades_03.png" id="5_bjd11"]
 [ext_resource type="Texture2D" uid="uid://chqn8mne5v8od" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_07.png" id="5_nxtc6"]
 [ext_resource type="Texture2D" uid="uid://b1vf8xu6nx3j7" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_spades_J.png" id="6_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://14bcg2jnveyq" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_clubs_K.png" id="6_qmy6f"]
+[ext_resource type="Texture2D" uid="uid://crcq44mr3ca7l" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_clubs_08.png" id="7_mwfav"]
+[ext_resource type="Texture2D" uid="uid://bpsxvfkmvttoh" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_hearts_Q.png" id="8_3p2gp"]
+[ext_resource type="Texture2D" uid="uid://c3tcm0uplk0kk" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_hearts_05.png" id="9_cvmbd"]
+[ext_resource type="Texture2D" uid="uid://cilbmqkwhfnwe" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_09.png" id="11_ft6cd"]
+[ext_resource type="Texture2D" uid="uid://cchavgbrmdeu1" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_hearts_10.png" id="14_3p2gp"]
+[ext_resource type="Texture2D" uid="uid://cm27uqatshsdw" path="res://assets/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_06.png" id="15_cvmbd"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,7 +25,7 @@ script = ExtResource("1_elqb8")
 CardScene = ExtResource("2_rvslj")
 Columns = 6
 BackTexture = ExtResource("3_0bbpv")
-FaceTextures = [ExtResource("4_c01mt"), ExtResource("5_nxtc6"), ExtResource("6_jlsqs")]
+FaceTextures = [ExtResource("4_wp0k4"), ExtResource("5_bjd11"), ExtResource("6_qmy6f"), ExtResource("7_mwfav"), ExtResource("8_3p2gp"), ExtResource("9_cvmbd"), ExtResource("5_nxtc6"), ExtResource("11_ft6cd"), ExtResource("6_jlsqs"), ExtResource("4_c01mt"), ExtResource("14_3p2gp"), ExtResource("15_cvmbd")]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
