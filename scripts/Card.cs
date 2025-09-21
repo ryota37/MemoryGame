@@ -9,6 +9,8 @@ public partial class Card : Button
 	
 	private TextureRect _image;
 	
+	[Signal] public delegate void CardClickedEventHandler(Card card);
+	
 	public override void _Ready()
 	{
 		FocusMode = FocusModeEnum.None;
@@ -42,7 +44,18 @@ public partial class Card : Button
 	
 	private void OnPressed()
 	{
-		IsFaceUp = !IsFaceUp;
+		EmitSignal(SignalName.CardClicked, this);
+	}
+	
+	public void FlipToFace()
+	{
+		IsFaceUp = true;
+		UpdateVisual();
+	}
+	
+	public void FlipToBack()
+	{
+		IsFaceUp = false;
 		UpdateVisual();
 	}
 	
