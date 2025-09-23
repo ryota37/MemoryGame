@@ -16,7 +16,7 @@ public partial class Main : Control
 	private GridContainer _grid;
 	private List<Card> _faceUpCards = new List<Card>();
 	private bool _isProcessing = false;
-	
+		
 	public override void _Ready()
 	{
 		_grid = GetNode<GridContainer>("MarginContainer/Grid");
@@ -24,13 +24,26 @@ public partial class Main : Control
 		
 		int total = Rows * Columns;
 		
+		// Create lottery box
+		List<int> numbers = new List<int>();
+		for (int i = 0; i < total / 2; i++)
+		{
+			numbers.Add(i);
+			numbers.Add(i);
+		}
+		List<int> shuffled = numbers.OrderBy(x => Guid.NewGuid()).ToList();
+		
 		for (int i = 0; i < total; i++)
 		{
 			var card = CardScene.Instantiate<Card>();
 			card.BackTexture = BackTexture;
 			
 			if (FaceTextures.Length > 0)
-				card.FaceTexture = FaceTextures[i%FaceTextures.Length];
+			{
+				int index = shuffled[i];
+				card.FaceTexture = FaceTextures[index];
+				GD.Print(index);
+			}
 			
 			card.CardClicked += OnCardClicked;
 			_grid.AddChild(card);			
