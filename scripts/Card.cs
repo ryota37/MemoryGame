@@ -7,6 +7,7 @@ public partial class Card : Button
 	[Export] public Texture2D FaceTexture { get; set; }
 	[Export] public bool IsFaceUp { get; private set; } = false;
 	
+	public int _index;
 	private TextureRect _image;
 	
 	[Signal] public delegate void CardClickedEventHandler(Card card);

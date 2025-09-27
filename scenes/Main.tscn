@@ -23,7 +23,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_elqb8")
 CardScene = ExtResource("2_rvslj")
-Columns = 6
 BackTexture = ExtResource("3_0bbpv")
 FaceTextures = [ExtResource("4_wp0k4"), ExtResource("5_bjd11"), ExtResource("6_qmy6f"), ExtResource("7_mwfav"), ExtResource("8_3p2gp"), ExtResource("9_cvmbd"), ExtResource("5_nxtc6"), ExtResource("11_ft6cd"), ExtResource("6_jlsqs"), ExtResource("4_c01mt"), ExtResource("14_3p2gp"), ExtResource("15_cvmbd")]
 

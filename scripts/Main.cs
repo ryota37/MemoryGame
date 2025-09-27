@@ -7,7 +7,7 @@ public partial class Main : Control
 {
 	[Export] public PackedScene CardScene { get; set; }
 	[Export] public int Rows { get; set; } = 4;
-	[Export] public int Columns { get; set; } = 4;
+	[Export] public int Columns { get; set; } = 6;
 	[Export] public float FlipBackDelay { get; set; } = 1.0f;
 	
 	[Export] public Texture2D BackTexture { get; set; }
@@ -42,7 +42,7 @@ public partial class Main : Control
 			{
 				int index = shuffled[i];
 				card.FaceTexture = FaceTextures[index];
-				GD.Print(index);
+				card._index = index;
 			}
 			
 			card.CardClicked += OnCardClicked;
@@ -62,6 +62,15 @@ public partial class Main : Control
 		{
 			_isProcessing = true;
 			
+			if (AreCardsMatching(_faceUpCards[0], _faceUpCards[1]))
+			{
+				GD.Print("Match!");
+			}
+			else
+			{
+				GD.Print("Not match...");
+			}
+			
 			await ToSignal(GetTree().CreateTimer(FlipBackDelay), SceneTreeTimer.SignalName.Timeout);
 			
 			foreach(var card in _faceUpCards)
@@ -73,4 +82,12 @@ public partial class Main : Control
 			_isProcessing = false;
 		}
 	}
+	
+	private bool AreCardsMatching(Card card1, Card card2)
+	{
+		int half_total = Rows * Columns / 2;
+		if (card1._index % half_total == card2._index % half_total) return true;
+		else return false;
+	}
+	
 }
