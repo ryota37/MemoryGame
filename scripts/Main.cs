@@ -46,7 +46,7 @@ public partial class Main : Control
 			}
 			
 			card.CardClicked += OnCardClicked;
-			_grid.AddChild(card);			
+			_grid.AddChild(card);
 		}
 	}
 		
@@ -69,13 +69,13 @@ public partial class Main : Control
 			else
 			{
 				GD.Print("Not match...");
-			}
+				
+				await ToSignal(GetTree().CreateTimer(FlipBackDelay), SceneTreeTimer.SignalName.Timeout);
 			
-			await ToSignal(GetTree().CreateTimer(FlipBackDelay), SceneTreeTimer.SignalName.Timeout);
-			
-			foreach(var card in _faceUpCards)
-			{
-				card.FlipToBack();
+				foreach(var card in _faceUpCards)
+				{
+					card.FlipToBack();
+				}
 			}
 			
 			_faceUpCards.Clear();
